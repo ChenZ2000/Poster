@@ -20,11 +20,17 @@ body {
     color: white;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     position: relative;
+    overflow: hidden;
 }
 
 .top-section {
     padding: 40px 30px 100px 30px;
     text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%);
+    background: linear-gradient(160deg, #1c75bc 0%, #004aad 100%);
+    z-index: 2;
+    position: relative;
+    padding-bottom: 120px;
 }
 
 .logos {
@@ -36,9 +42,10 @@ body {
 }
 
 .logo-img {
-    height: 80px;
+    height: 90px;
     width: auto;
     object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
 }
 
 .joint-host {
@@ -124,20 +131,12 @@ body {
     font-weight: bold;
 }
 
-/* Diagonal Transition */
-.top-section {
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
-    background: linear-gradient(to bottom, #1c75bc 0%, #004aad 100%);
-    z-index: 2;
-    position: relative;
-}
-
 .bottom-section {
     background-color: #ffffff;
     color: #333;
     padding: 60px 30px;
-    margin-top: -80px; /* Offset for the V shape */
-    padding-top: 120px;
+    margin-top: -100px;
+    padding-top: 150px;
     text-align: center;
 }
 
